@@ -127,7 +127,8 @@ module CapybaraBox
         browser: chrome_family? ? :chrome : @browser,
         clear_local_storage: true,
         clear_session_storage: true,
-      }
+        url: (@parameters[:url] if @parameters[:url])
+      }.compact
 
       opts
     end
